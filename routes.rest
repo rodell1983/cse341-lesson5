@@ -18,15 +18,15 @@ content-type: application/json
 }
 
 ### Get all missions
-GET http://localhost:8080/vehicle
+GET http://localhost:8080/mission
 
 
 ### Get mission by name
-GET http://localhost:8080/vehicle/redstone
+GET http://localhost:8080/mission/localhost:8080/mission/Mercury 1
 
 
 ### Create mission
-POST http://localhost:8080/vehicle HTTP/1.1
+POST http://localhost:8080/mission HTTP/1.1
 content-type: application/json
   {
     "name": "Crew Dragon Demo-2",
