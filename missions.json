@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Mercury 1",
+    "launchSite": "Cape Canaveral",
+    "vehicle": "Redstone",
+    "duration": "15m 22s",
+    "crew": "Alan Sheppard",
+    "apogee": "117",
+    "destination": "ballistic"
+  },
+  {
+    "name": "Mercury 3",
+    "launchSite": "Cape Canaveral",
+    "vehicle": "Redstone",
+    "duration": "4h 55m 23s",
+    "crew": "John Glenn",
+    "apogee": "162",
+    "destination": "LEO"
+  },
+  {
+    "name": "Mercury 5",
+    "launchSite": "Cape Canaveral",
+    "vehicle": "Redstone",
+    "duration": "9h 13m 15s",
+    "crew": "Wally Schirra",
+    "apogee": "176",
+    "destination": "LEO"
+  },
+  {
+    "name": "Apollo 11",
+    "launchSite": "Cape Canaveral",
+    "vehicle": "Saturn V",
+    "duration": "195h 18m 35s",
+    "crew": ["Neil Armstrong", "Buzz Aldren", "Michael Collins"],
+    "apogee": "240000",
+    "destination": "moon"
+  }
+]

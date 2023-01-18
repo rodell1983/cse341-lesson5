@@ -1,0 +1,74 @@
+// LOCALHOST
+### Get all contacts
+GET http://localhost:8080/contacts
+
+
+### Get contact by id
+GET http://localhost:8080/contacts/63b87d16480b9cffa0b5156c
+
+
+### Create contact
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Johnny",
+    "lastName":"Appleseed",
+    "email":"japple@test.com",
+    "favoriteColor":"green",
+    "birthday":"04/29/1933"
+}
+
+
+### PUT contact
+PUT http://localhost:8080/contacts/63b87d16480b9cffa0b5156c HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"John",
+    "lastName":"Smith",
+    "email":"jsmith@test.com",
+    "favoriteColor":"red",
+    "birthday":"01/31/1980"
+}
+### DELETE contact
+DELETE http://localhost:8080/contacts/63b87d16480b9cffa0b5156d HTTP/1.1
+
+// PRODUCTION Deploy
+### Get all contacts
+GET https://cit341-lesson4.onrender.com/contacts
+
+
+### Get contact by id
+GET https://cse341-lesson3-8yog.onrender.com/contacts/63b87d16480b9cffa0b5156c
+
+
+### Create contact
+POST https://cit341-lesson4.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Johnny",
+    "lastName":"Appleseed #2",
+    "email":"japple2@test.com",
+    "favoriteColor":"green",
+    "birthday":"04/29/1967"
+}
+
+
+### PUT contact
+PUT https://cit341-lesson4.onrender.com/contacts/63b87d16480b9cffa0b5156c HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"John",
+    "lastName":"Smith",
+    "email":"jsmith@test.com",
+    "favoriteColor":"brown",
+    "birthday":"01/30/1983"
+}
+
+
+### DELETE contact
+DELETE https://cit341-lesson4.onrender.com/contacts/63b87d16480b9cffa0b5156c HTTP/1.1
+

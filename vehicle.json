@@ -1,0 +1,27 @@
+[
+  {
+    "name": "redstone",
+    "stages": "1",
+    "thrust": "78,000"
+  },
+  {
+    "name": "Atlas",
+    "stages": "2",
+    "thrust": "250000"
+  },
+  {
+    "name": "titan",
+    "stages": "2",
+    "thrust": "430000"
+  },
+  {
+    "name": "Saturn V",
+    "stages": "3",
+    "thrust": "7891000"
+  },
+  {
+    "name": "Space Shuttle",
+    "stages": "3",
+    "thrust": "1200000"
+  }
+]
