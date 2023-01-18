@@ -42,7 +42,7 @@ content-type: application/json
 
 // PRODUCTION Deploy
 ### Get all contacts
-GET https://cit341-lesson4.onrender.com/contacts
+GET https://https://cse341-lesson5.onrender.com/vehicle
 
 
 ### Get contact by id

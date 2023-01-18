@@ -7,14 +7,11 @@
   },
   "host": "cse341-lesson5.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "https",
-    "http"
-  ],
+  "schemes": ["https"],
   "paths": {
     "/api-docs": {
       "get": {
-        "description": "",
+        "description": "test",
         "parameters": [],
         "responses": {}
       }
