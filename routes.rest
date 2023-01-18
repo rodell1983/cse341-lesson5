@@ -22,7 +22,7 @@ GET http://localhost:8080/mission
 
 
 ### Get mission by name
-GET http://localhost:8080/mission/localhost:8080/mission/Mercury 1
+GET http://localhost:8080/mission/Mercury-1
 
 
 ### Create mission
@@ -41,40 +41,41 @@ content-type: application/json
 
 
 // PRODUCTION Deploy
-### Get all contacts
-GET https://https://cse341-lesson5.onrender.com/vehicle
+
+GET https://cse341-lesson5.onrender.com/vehicle
 
 
-### Get contact by id
-GET https://cse341-lesson3-8yog.onrender.com/contacts/63b87d16480b9cffa0b5156c
+### Get vehicle by name
+GET https://cse341-lesson5.onrender.com/vehicle/redstone
 
 
-### Create contact
-POST https://cit341-lesson4.onrender.com/contacts HTTP/1.1
+### Create vehicle
+POST https://cse341-lesson5.onrender.com/vehicle HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Johnny",
-    "lastName":"Appleseed #2",
-    "email":"japple2@test.com",
-    "favoriteColor":"green",
-    "birthday":"04/29/1967"
+    "name":"Falcon 9",
+    "stages":"2",
+    "thrust":"1000000"
 }
 
+### Get all missions
+GET https://cse341-lesson5.onrender.com/mission
 
-### PUT contact
-PUT https://cit341-lesson4.onrender.com/contacts/63b87d16480b9cffa0b5156c HTTP/1.1
+
+### Get mission by name
+GET https://cse341-lesson5.onrender.com/localhost:8080/mission/Mercury-1
+
+
+### Create mission
+POST https://cse341-lesson5.onrender.com/mission HTTP/1.1
 content-type: application/json
-
-{
-    "firstName":"John",
-    "lastName":"Smith",
-    "email":"jsmith@test.com",
-    "favoriteColor":"brown",
-    "birthday":"01/30/1983"
-}
-
-
-### DELETE contact
-DELETE https://cit341-lesson4.onrender.com/contacts/63b87d16480b9cffa0b5156c HTTP/1.1
-
+  {
+    "name": "Crew Dragon Demo-2",
+    "launchSite": "Cape Canaveral",
+    "vehicle": "Falcon 9",
+    "duration": "63d 23h 25m",
+    "crew": ["Behnken","Hurley"],
+    "apogee": "262",
+    "destination": "Space Station"
+  }
