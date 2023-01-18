@@ -17,6 +17,27 @@ content-type: application/json
     "thrust":"1000000"
 }
 
+### Get all missions
+GET http://localhost:8080/vehicle
+
+
+### Get mission by name
+GET http://localhost:8080/vehicle/redstone
+
+
+### Create mission
+POST http://localhost:8080/vehicle HTTP/1.1
+content-type: application/json
+  {
+    "name": "Crew Dragon Demo-2",
+    "launchSite": "Cape Canaveral",
+    "vehicle": "Falcon 9",
+    "duration": "63d 23h 25m",
+    "crew": ["Behnken","Hurley"],
+    "apogee": "262",
+    "destination": "Space Station"
+  }
+
 
 
 // PRODUCTION Deploy
