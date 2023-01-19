@@ -5,7 +5,7 @@ const vehiclesController = require('../controllers/vehicle');
 
 router.get('/', vehiclesController.getAll);
 
-router.get('/:id', vehiclesController.getSingle);
+router.get('/:name', vehiclesController.getSingle);
 
 router.post('/', vehiclesController.createVehicle);
 

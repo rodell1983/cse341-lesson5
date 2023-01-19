@@ -16,7 +16,7 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
   try {
-    const mName = new ObjectId(req.params.id);
+    const mName = new ObjectId(req.params.missionName);
     const result = await mongodb.getDb().db().collection('mission').find({ name: mName });
     result.toArray().then((lists) => {
       res.setHeader('Content-Type', 'application/json');
