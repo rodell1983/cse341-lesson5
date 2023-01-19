@@ -5,7 +5,7 @@ const missionsController = require('../controllers/mission');
 
 router.get('/', missionsController.getAll);
 
-router.get('/:missionName', missionsController.getSingle);
+router.get('/:id', missionsController.getSingle);
 
 router.post('/', missionsController.createMission);
 
