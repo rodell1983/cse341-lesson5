@@ -2,10 +2,10 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Rockets API",
+    "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "cse341-lesson5.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
     "https"
