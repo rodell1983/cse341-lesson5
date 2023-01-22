@@ -4,6 +4,7 @@ const saveMission = (req, res, next) => {
   const validationRule = {
     name: 'required|string',
     launchSite: 'required|string',
+    vehicle: 'required|string',
     duration: 'string',
     crew: 'string',
     apogee: 'numeric',

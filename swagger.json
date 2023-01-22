@@ -369,7 +369,12 @@
           "type": "number",
           "example": 1000000
         }
-      }
+      },
+      "required": [
+        "name",
+        "stages",
+        "thrust"
+      ]
     },
     "mission": {
       "type": "object",
@@ -402,7 +407,13 @@
           "type": "string",
           "example": "moon"
         }
-      }
+      },
+      "required": [
+        "name",
+        "launchSite",
+        "vehicle",
+        "destination"
+      ]
     }
   }
 }

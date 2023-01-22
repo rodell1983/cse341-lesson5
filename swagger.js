@@ -10,18 +10,18 @@ const doc = {
 
 definitions: {
     vehicle: {
-        name: "Atlas",
-        stages: 2,
-        thrust: 1000000.00
+        $name: "Atlas",
+        $stages: 2,
+        $thrust: 1000000.00
     },
     mission: {
-      name: "apollo11",
-      launchSite: "Cape Canaveral",
-      vehicle: "Saturn V",
+      $name: "apollo11",
+      $launchSite: "Cape Canaveral",
+      $vehicle: "Saturn V",
       duration: "195h 18m 35s",
       crew: '["Neil Armstrong", "Buzz Aldren", "Michael Collins"]',
       apogee: 240000.00,
-      destination: "moon"
+      $destination: "moon"
     }
   }
 };
