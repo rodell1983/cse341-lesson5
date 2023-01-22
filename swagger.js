@@ -2,11 +2,28 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'My API',
+    title: 'Rocket Database',
     description: 'Contacts API'
   },
   host: 'cse341-lesson6.onrender.com',
-  schemes: ['https']
+  schemes: ['https'],
+
+definitions: {
+    vehicle: {
+        name: "Atlas",
+        stages: 2,
+        thrust: 1000000.00
+    },
+    mission: {
+      name: "apollo11",
+      launchSite: "Cape Canaveral",
+      vehicle: "Saturn V",
+      duration: "195h 18m 35s",
+      crew: '["Neil Armstrong", "Buzz Aldren", "Michael Collins"]',
+      apogee: 240000.00,
+      destination: "moon"
+    }
+  }
 };
 
 const outputFile = './swagger.json';

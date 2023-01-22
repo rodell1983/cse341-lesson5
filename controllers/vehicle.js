@@ -1,7 +1,11 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
+
 const getAll = (req, res) => {
+  // #swagger.tags = ['Vehicle']
+  // #swagger.description = 'Get all vehicle objects'
+
   mongodb
     .getDb()
     .db()
@@ -17,6 +21,8 @@ const getAll = (req, res) => {
 };
 
 const getSingle = (req, res) => {
+  // #swagger.tags = ['Vehicle']
+  // #swagger.description = 'Get vehicle object by _id'
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid contact id to find a contact.');
   }
@@ -36,6 +42,8 @@ const getSingle = (req, res) => {
 };
 
 const createVehicle = async (req, res) => {
+  // #swagger.tags = ['Vehicle']
+  // #swagger.description = 'Add Vehicle'
   const vehicle = {
     name: req.body.name,
     stages: req.body.stages,
@@ -50,6 +58,8 @@ const createVehicle = async (req, res) => {
 };
 
 const updateVehicle = async (req, res) => {
+  // #swagger.tags = ['Vehicle']
+  // #swagger.description = 'Update Vehicle'
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid contact id to update a contact.');
   }
@@ -74,6 +84,8 @@ const updateVehicle = async (req, res) => {
 };
 
 const deleteVehicle = async (req, res) => {
+  // #swagger.tags = ['Vehicle']
+  // #swagger.description = 'Delete Vehicle'
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid contact id to delete a contact.');
   }

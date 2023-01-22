@@ -1,13 +1,15 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
+    "title": "Rocket Database",
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cse341-lesson6.onrender.com",
   "basePath": "/",
-  "schemes": ["https", "http"],
+  "schemes": [
+    "https"
+  ],
   "paths": {
     "/api-docs": {
       "get": {
@@ -18,8 +20,13 @@
     },
     "/vehicle/": {
       "get": {
-        "description": "",
-        "produces": ["application/json"],
+        "tags": [
+          "Vehicle"
+        ],
+        "description": "Get all vehicle objects",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -31,7 +38,10 @@
         }
       },
       "post": {
-        "description": "",
+        "tags": [
+          "Vehicle"
+        ],
+        "description": "Add Vehicle",
         "parameters": [
           {
             "name": "body",
@@ -67,8 +77,13 @@
     },
     "/vehicle/{id}": {
       "get": {
-        "description": "",
-        "produces": ["application/json"],
+        "tags": [
+          "Vehicle"
+        ],
+        "description": "Get vehicle object by _id",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -87,7 +102,10 @@
         }
       },
       "put": {
-        "description": "",
+        "tags": [
+          "Vehicle"
+        ],
+        "description": "Update Vehicle",
         "parameters": [
           {
             "name": "id",
@@ -130,7 +148,10 @@
         }
       },
       "delete": {
-        "description": "",
+        "tags": [
+          "Vehicle"
+        ],
+        "description": "Delete Vehicle",
         "parameters": [
           {
             "name": "id",
@@ -154,8 +175,13 @@
     },
     "/mission/": {
       "get": {
-        "description": "",
-        "produces": ["application/json"],
+        "tags": [
+          "Mission"
+        ],
+        "description": "Get all mission objects",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -167,7 +193,10 @@
         }
       },
       "post": {
-        "description": "",
+        "tags": [
+          "Mission"
+        ],
+        "description": "Add Mission",
         "parameters": [
           {
             "name": "body",
@@ -215,8 +244,13 @@
     },
     "/mission/{id}": {
       "get": {
-        "description": "",
-        "produces": ["application/json"],
+        "tags": [
+          "Mission"
+        ],
+        "description": "Get mission by _id",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -235,7 +269,10 @@
         }
       },
       "put": {
-        "description": "",
+        "tags": [
+          "Mission"
+        ],
+        "description": "Update Mission",
         "parameters": [
           {
             "name": "id",
@@ -290,7 +327,10 @@
         }
       },
       "delete": {
-        "description": "",
+        "tags": [
+          "Mission"
+        ],
+        "description": "Delete mission",
         "parameters": [
           {
             "name": "id",
@@ -309,6 +349,58 @@
           "500": {
             "description": "Internal Server Error"
           }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "vehicle": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "Atlas"
+        },
+        "stages": {
+          "type": "number",
+          "example": 2
+        },
+        "thrust": {
+          "type": "number",
+          "example": 1000000
+        }
+      }
+    },
+    "mission": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "example": "apollo11"
+        },
+        "launchSite": {
+          "type": "string",
+          "example": "Cape Canaveral"
+        },
+        "vehicle": {
+          "type": "string",
+          "example": "Saturn V"
+        },
+        "duration": {
+          "type": "string",
+          "example": "195h 18m 35s"
+        },
+        "crew": {
+          "type": "string",
+          "example": "[\"Neil Armstrong\", \"Buzz Aldren\", \"Michael Collins\"]"
+        },
+        "apogee": {
+          "type": "number",
+          "example": 240000
+        },
+        "destination": {
+          "type": "string",
+          "example": "moon"
         }
       }
     }

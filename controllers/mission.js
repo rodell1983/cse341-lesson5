@@ -2,6 +2,8 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = (req, res) => {
+  // #swagger.tags = ['Mission']
+  // #swagger.description = 'Get all mission objects'
   mongodb
     .getDb()
     .db()
@@ -17,6 +19,8 @@ const getAll = (req, res) => {
 };
 
 const getSingle = (req, res) => {
+  // #swagger.tags = ['Mission']
+  // #swagger.description = 'Get mission by _id'
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid contact id to find a contact.');
   }
@@ -36,6 +40,8 @@ const getSingle = (req, res) => {
 };
 
 const createMission = async (req, res) => {
+  // #swagger.tags = ['Mission']
+  // #swagger.description = 'Add Mission'
   const mission = {
     name: req.body.name,
     launchSite: req.body.launchSite,
@@ -54,6 +60,8 @@ const createMission = async (req, res) => {
 };
 
 const updateMission = async (req, res) => {
+  // #swagger.tags = ['Mission']
+  // #swagger.description = 'Update Mission'
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid contact id to update a contact.');
   }
@@ -82,6 +90,8 @@ const updateMission = async (req, res) => {
 };
 
 const deleteMission = async (req, res) => {
+  // #swagger.tags = ['Mission']
+  // #swagger.description = 'Delete mission'
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid contact id to delete a contact.');
   }
