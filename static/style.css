@@ -35,7 +35,7 @@ body {
   
   .img-github {
     margin-top: 32px;
-    width: 160px;
+
     height: 160px;
   }
   
@@ -45,7 +45,7 @@ body {
     width: 220px;
     line-height: 38px;
     padding-top: 2px;
-    border-radius: 20px;
+    border-radius: 10px;
     color: white;
     background: rgba(18, 172, 131, 1);
     margin: 0 auto;

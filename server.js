@@ -14,7 +14,7 @@ app
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   })
-  .use('/', require('./routes'))
+  //.use('/', require('./routes'))
   .use(express.static('static'));
 
 app.get('/', (req, res) => {
