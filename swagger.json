@@ -5,7 +5,7 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "cse341-lesson6.onrender.com",
+  "host": "cse341-lesson7.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"

@@ -5,7 +5,7 @@ const doc = {
     title: 'Rocket Database',
     description: 'Contacts API'
   },
-  host: 'cse341-lesson6.onrender.com',
+  host: 'cse341-lesson7.onrender.com',
   schemes: ['https'],
 
 definitions: {
