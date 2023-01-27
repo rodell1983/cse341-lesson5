@@ -2,14 +2,26 @@
   "swagger": "2.0",
   "info": {
     "title": "Rocket Database",
-    "description": "Contacts API",
+    "description": "Rockets API",
     "version": "1.0.0"
   },
-  "host": "cse341-lesson7.onrender.com",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
+    "http",
     "https"
   ],
+    "securityDefinitions":{
+
+      "oauth": {
+        "type": "oauth2",
+        "authorizationUrl": "http://localhost:8080/auth",
+        "scopes": 
+          { "read:vehicle": "read your pets", "write:vehicle": "modify pets in your account" }
+        
+      }
+    
+  },
   "paths": {
     "/api-docs": {
       "get": {
@@ -36,6 +48,7 @@
             "description": "Bad Request"
           }
         }
+
       },
       "post": {
         "tags": [
@@ -145,7 +158,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [{ "oauth": ["write:vehicle", "read:vehicle"] }]
       },
       "delete": {
         "tags": [
@@ -170,7 +184,8 @@
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [{ "oauth": ["write:vehicle", "read:vehicle"] }]
       }
     },
     "/mission/": {
