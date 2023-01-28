@@ -5,11 +5,11 @@
     "description": "Rocket Api <br><a href='/auth'>Authorize User</a> ",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cse341-lesson7.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http",
-    "https"
+    "https",
+    "http"
   ],
   "securityDefinitions": {
     "oauth": {
