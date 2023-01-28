@@ -7,24 +7,18 @@ const doc = {
   },
   host: 'cse341-lesson8.onrender.com',
   schemes: ['https', 'http'],
-  components: {
-    securitySchemes: {
-      oauth: {
-        type: 'oauth2',
-        flows: [
-          {
-            implicit: {
-              authorizationUrl: 'https://github.com/login/oauth/authorize',
-              scopes: {
-                'read:vehicle': 'read vehicle data',
-                'write:vehicle': 'write vehicle data',
-                'read:mission': 'read mission data',
-                'write:mission': 'write mission data',
-                admin: 'Do it all'
-              }
-            }
-          }
-        ]
+
+  securityDefinitions: {
+    oauth: {
+      type: 'oauth2',
+      authorizationUrl: 'https://github.com/login/oauth/authorize',
+      flow: 'implicit',
+      scopes: {
+        'read:vehicle': 'read vehicle data',
+        'write:vehicle': 'write vehicle data',
+        'read:mission': 'read mission data',
+        'write:mission': 'write mission data',
+        admin: 'Do it all'
       }
     }
   },
