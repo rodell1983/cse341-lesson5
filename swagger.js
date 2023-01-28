@@ -5,7 +5,7 @@ const doc = {
     title: 'Rocket Database',
     description: "Rocket Api <br><a href='/auth'>Authorize User</a> "
   },
-  host: 'cse341-lesson7.onrender.com',
+  host: 'cse341-lesson8.onrender.com',
   schemes: ['https','http'],
   securityDefinitions: {
     "oauth": {

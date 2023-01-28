@@ -5,7 +5,7 @@
     "description": "Rocket Api <br><a href='/auth'>Authorize User</a> ",
     "version": "1.0.0"
   },
-  "host": "cse341-lesson7.onrender.com",
+  "host": "cse341-lesson8.onrender.com",
   "basePath": "/",
   "schemes": [
     "https",
