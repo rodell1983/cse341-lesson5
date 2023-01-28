@@ -1,7 +1,6 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-
 const getAll = (req, res) => {
   // #swagger.tags = ['Vehicle']
   // #swagger.description = 'Get all vehicle objects'

@@ -20,7 +20,8 @@
         "read:vehicle": "read vehicle data",
         "write:vehicle": "write vehicle data",
         "read:mission": "read mission data",
-        "write:mission": "write mission data"
+        "write:mission": "write mission data",
+        "admin": "Do it all"
       }
     }
   },

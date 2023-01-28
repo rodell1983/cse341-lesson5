@@ -6,36 +6,36 @@ const doc = {
     description: "Rocket Api <br><a href='/auth'>Authorize User</a> "
   },
   host: 'cse341-lesson8.onrender.com',
-  schemes: ['https','http'],
+  schemes: ['https', 'http'],
   securityDefinitions: {
-    "oauth": {
-        "type": "oauth2",
-        "authorizationUrl": "https://github.com/login/oauth/authorize",
-        "flow": "implicit",
-        "scopes": {
-            "read:vehicle": "read vehicle data",
-            "write:vehicle": "write vehicle data",
-            "read:mission": "read mission data",
-            "write:mission": "write mission data"
-        }
+    oauth: {
+      type: 'oauth2',
+      authorizationUrl: 'https://github.com/login/oauth/authorize',
+      flow: 'implicit',
+      scopes: {
+        'read:vehicle': 'read vehicle data',
+        'write:vehicle': 'write vehicle data',
+        'read:mission': 'read mission data',
+        'write:mission': 'write mission data',
+        'admin': 'Do it all'
+      }
     }
-},
+  },
 
-
-definitions: {
+  definitions: {
     vehicle: {
-        $name: "Atlas",
-        $stages: 2,
-        $thrust: 1000000.00
+      $name: 'Atlas',
+      $stages: 2,
+      $thrust: 1000000.0
     },
     mission: {
-      $name: "apollo11",
-      $launchSite: "Cape Canaveral",
-      $vehicle: "Saturn V",
-      duration: "195h 18m 35s",
+      $name: 'apollo11',
+      $launchSite: 'Cape Canaveral',
+      $vehicle: 'Saturn V',
+      duration: '195h 18m 35s',
       crew: '["Neil Armstrong", "Buzz Aldren", "Michael Collins"]',
-      apogee: 240000.00,
-      $destination: "moon"
+      apogee: 240000.0,
+      $destination: 'moon'
     }
   }
 };
