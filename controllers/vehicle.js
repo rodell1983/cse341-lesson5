@@ -60,6 +60,7 @@ const createVehicle = async (req, res) => {
 const updateVehicle = async (req, res) => {
   // #swagger.tags = ['Vehicle']
   // #swagger.description = 'Update Vehicle'
+  // #swagger.security = [{ "oauth": ["write:vehicle", "read:vehicle"] }]
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid contact id to update a contact.');
   }
@@ -86,6 +87,7 @@ const updateVehicle = async (req, res) => {
 const deleteVehicle = async (req, res) => {
   // #swagger.tags = ['Vehicle']
   // #swagger.description = 'Delete Vehicle'
+  // #swagger.security = [{ "oauth": ["write:vehicle", "read:vehicle"] }]
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid contact id to delete a contact.');
   }

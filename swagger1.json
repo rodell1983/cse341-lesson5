@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Rocket Database",
-    "description": "Rocket Api <br><a href='/auth'>Authorize User</a> ",
+    "description": "Rockets API",
     "version": "1.0.0"
   },
   "host": "localhost:8080",
@@ -11,18 +11,16 @@
     "http",
     "https"
   ],
-  "securityDefinitions": {
-    "oauth": {
-      "type": "oauth2",
-      "authorizationUrl": "https://github.com/login/oauth/authorize",
-      "flow": "implicit",
-      "scopes": {
-        "read:vehicle": "read vehicle data",
-        "write:vehicle": "write vehicle data",
-        "read:mission": "read mission data",
-        "write:mission": "write mission data"
+    "securityDefinitions":{
+
+      "oauth": {
+        "type": "oauth2",
+        "authorizationUrl": "http://localhost:8080/auth",
+        "scopes": 
+          { "read:vehicle": "read your pets", "write:vehicle": "modify pets in your account" }
+        
       }
-    }
+    
   },
   "paths": {
     "/api-docs": {
@@ -50,6 +48,7 @@
             "description": "Bad Request"
           }
         }
+
       },
       "post": {
         "tags": [
@@ -160,14 +159,7 @@
             "description": "Internal Server Error"
           }
         },
-        "security": [
-          {
-            "oauth": [
-              "write:vehicle",
-              "read:vehicle"
-            ]
-          }
-        ]
+        "security": [{ "oauth": ["write:vehicle", "read:vehicle"] }]
       },
       "delete": {
         "tags": [
@@ -193,14 +185,7 @@
             "description": "Internal Server Error"
           }
         },
-        "security": [
-          {
-            "oauth": [
-              "write:vehicle",
-              "read:vehicle"
-            ]
-          }
-        ]
+        "security": [{ "oauth": ["write:vehicle", "read:vehicle"] }]
       }
     },
     "/mission/": {
@@ -354,15 +339,7 @@
           "500": {
             "description": "Internal Server Error"
           }
-        },
-        "security": [
-          {
-            "oauth": [
-              "write:mission",
-              "read:mission"
-            ]
-          }
-        ]
+        }
       },
       "delete": {
         "tags": [
@@ -387,15 +364,7 @@
           "500": {
             "description": "Internal Server Error"
           }
-        },
-        "security": [
-          {
-            "oauth": [
-              "write:mission",
-              "read:mission"
-            ]
-          }
-        ]
+        }
       }
     }
   },

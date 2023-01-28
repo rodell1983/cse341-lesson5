@@ -62,6 +62,7 @@ const createMission = async (req, res) => {
 const updateMission = async (req, res) => {
   // #swagger.tags = ['Mission']
   // #swagger.description = 'Update Mission'
+  // #swagger.security = [{ "oauth": ["write:mission", "read:mission"] }]
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid contact id to update a contact.');
   }
@@ -92,6 +93,7 @@ const updateMission = async (req, res) => {
 const deleteMission = async (req, res) => {
   // #swagger.tags = ['Mission']
   // #swagger.description = 'Delete mission'
+  // #swagger.security = [{ "oauth": ["write:mission", "read:mission"] }]
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json('Must use a valid contact id to delete a contact.');
   }

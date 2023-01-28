@@ -3,7 +3,7 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
   info: {
     title: 'Rocket Database',
-    description: 'Rockets API'
+    description: "Rocket Api <br><a href='/auth'>Authorize User</a> "
   },
   host: 'localhost:8080',
   schemes: ['http','https'],
@@ -13,15 +13,14 @@ const doc = {
         "authorizationUrl": "https://github.com/login/oauth/authorize",
         "flow": "implicit",
         "scopes": {
-            "admin:vehicle": "read/write vehicle data"
+            "read:vehicle": "read vehicle data",
+            "write:vehicle": "write vehicle data",
+            "read:mission": "read mission data",
+            "write:mission": "write mission data"
         }
     }
 },
-security: {
-  "oauth":{
-    "admin":"vehicle"
-  }
-},
+
 
 definitions: {
     vehicle: {
